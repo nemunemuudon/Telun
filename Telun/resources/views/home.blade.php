@@ -1,11 +1,49 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
- <title>home</title>
-</head>
-<body>
- <h1>kadai02 Blade を使ったページの表示</h1>
- <h2>コントローラーからビューの呼び出し</h2>
- <p>{{ $message }}</p>
-</body>
-</html>
+@extends("layouts.Telun")
+@section("link","{{ asset('../../css/home.css')}} ")
+@section("pageTitle","home")
+@section("title","home")
+@section("content")
+@foreach ($volunteer as $volunteer)
+<h4>{{$volunteer['title']}}</h4>
+<ul>
+    <li>
+        {{$volunteer['title']}}
+    </li>
+    <li>
+        {{$volunteer['Recperi']}}
+    </li>
+    <li>
+        {{$volunteer['holdperi']}}
+    </li>
+    <li>
+        {{$volunteer['holdperi']}}
+    </li>
+    <li>
+        {{$volunteer['price']}}
+    </li>
+    <li>
+        {{$volunteer['pridesc']}}
+    </li>
+    <li>
+        {{$volunteer['capa']}}
+    </li>
+    <li>
+        {{$volunteer['price']}}
+    </li>
+        {{$volunteer['target']}}
+        {{$volunteer['add']}}
+        {{$volunteer['adddesc']}}
+        {{$volunteer['station']}}
+        {{$volunteer['comment']}}
+        {{$volunteer['price']}}
+        {{$volunteer['pridesc']}}
+        {{$volunteer['capa']}}
+        {{$volunteer['target']}}
+        {{$volunteer['add']}}
+        {{$volunteer['adddesc']}}
+        {{$volunteer['station']}}
+        {{$volunteer['comment']}}
+
+</ul>
+@endforeach
+@endsection
