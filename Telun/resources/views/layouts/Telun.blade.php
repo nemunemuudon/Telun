@@ -13,6 +13,7 @@
             <div class="header">
                 <div class="container mx-auto py-5">
                     <a class="homebt" href="{{ route('home') }}">Telun</a>
+                    @yield('box')
                     <li class = "list">
                         <ul>
                             <a class="menubt" href="{{route('home')}}">MyPage</a>
@@ -59,10 +60,13 @@
         padding-top: 30px;
         padding-left:2.5%;
         text-decoration: none;
-        color: black;
+        color: white;
+        text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
         font-size: 40px;
         font-family: "fantasy";
-
     }
 
     /* list */
@@ -79,7 +83,11 @@
     }
     .menubt:hover{
         opacity: 1;
+        background: linear-gradient(transparent 85%, #2f2e2e 95%);
     }
 
-
+    /* title */
+    .title{
+        padding-left:10px;
+    }
 </style>
