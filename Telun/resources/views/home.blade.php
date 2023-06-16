@@ -1,7 +1,6 @@
 @extends("layouts.Telun")
 @section("link","{{ asset('css/home.css')}} ")
 @section("pageTitle","home")
-@section("title","home")
 @section("box")
     <form id="form1" action="{{ asset('css/home.css')}}">
         <input id="sbox"  id="s" name="s" type="text" placeholder="キーワードを入力" />
@@ -24,7 +23,6 @@
                     <p id="tag">開催期間</p>
                     {{$volunteer['holdperi']}}
                 </li>
-
 
             </ul>
         </div>
